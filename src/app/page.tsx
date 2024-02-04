@@ -1,6 +1,8 @@
 'use client'
 import { useEffect, useState } from "react";
 import { useAddToHomescreenPrompt } from "./addToHomeScreen";
+import '@khmyznikov/pwa-install';
+import { PWAInstallElement } from "@khmyznikov/pwa-install";
 
 interface IBeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
@@ -37,9 +39,9 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
     <div className="flex items-center justify-center text-8xl">
-      TSG Store {promptable ? '👍' : '👎'}
+      TSG Store
     </div>
-    <button id="install" onClick={promptToInstall}>Add to homescreen</button>
+    <pwa-install />
   </main>
   );
 }
