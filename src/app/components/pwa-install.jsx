@@ -42,7 +42,7 @@ const PWAInstallComponent = ({
     const handleInstallSuccess = (event) => onInstallSuccess?.(event);
     const handleInstallFail = (event) => onInstallFail?.(event);
     const handleUserChoiceResult = (event) => onUserChoiceResult?.(event);
-    const handleInstallAvailable = (event) => onInstallAvailable?.(event);
+    const handleInstallAvailable = (event) => pwaInstallRef.current.showDialog();
     const handleInstallHowTo = (event) => onInstallHowTo?.(event);
     const handleInstallGallery = (event) => onInstallGallery?.(event);
 
