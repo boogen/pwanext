@@ -1,20 +1,20 @@
 {
-  "name": "Progressive Web Application",
-  "short_name": "PWA",
+  "name": "TSG Store",
+  "short_name": "TSG Store",
   "start_url": "/pwa-install/",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#82307b",
-  "description": "Installation component for Progressive Web Application DEMO",
+  "description": "Install TSG Store and get the best deals",
   "icons": [
       {
-          "src": "icons/icon@192.png",
+          "src": "icons/tsg@192.png",
           "type": "image/png",
           "sizes": "192x192",
           "purpose": "any"
       },
       {
-          "src": "icons/icon@512.png",
+          "src": "icons/tsg@512.png",
           "type": "image/png",
           "sizes": "512x512",
           "purpose": "any"
@@ -52,8 +52,8 @@
 "related_applications": [
   {
     "platform": "play",
-    "id": "com.learnpwa.app",
-    "url": "https://play.google.com/store/apps/details?id=com.learnpwa.app"
+    "id": "com.tensquaregames.letsfish2",
+    "url": "https://play.google.com/store/apps/details?id=com.tensquaregames.letsfish2"
   },
   {
     "platform": "webapp",
