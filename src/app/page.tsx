@@ -12,7 +12,6 @@ export default function Home() {
       e.stopPropagation();
       e.stopImmediatePropagation();
       setPromptEvent(e);
-      alert("ready");
     };
 
     window.addEventListener("beforeinstallprompt", ready as any);
