@@ -68,16 +68,10 @@ const PWAInstallComponent = ({
   return (
     <>
       <PWAInstall
-        disableChrome={false}
         ref={pwaInstallRef}
         {...nonNullProps}
       />
-      {pwaInstallRef?.current?.isInstallAvailable && ( 
-        <dev>install available</dev>
-      )} 
-      <dev>
-        <button onClick={() => pwaInstallRef.current.showDialog(true)}>Show Install Prompt</button>
-      </dev>
+      <button onClick={() => pwaInstallRef.current.showDialog(true)}>Show Install Prompt</button>
     </>
   );
 };

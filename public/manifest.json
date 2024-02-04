@@ -1,74 +1,63 @@
 {
-  "name": "TSG Store",
-  "short_name": "TSG",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "name": "Progressive Web Application",
+  "short_name": "PWA",
+  "start_url": "/pwa-install/",
   "display": "standalone",
-  "orientation": "portrait",
-  "scope": "/",
-  "start_url": "/",
-  "prefer_related_applications": true,
-  "related_applications": [
-    {
-    "platform": "play",
-    "id": "com.google.samples.apps.iosched"
-    }
-  ],
+  "background_color": "#fff",
+  "theme_color": "#82307b",
+  "description": "Installation component for Progressive Web Application DEMO",
   "icons": [
-    {
-      "src": "icons/icon-48x48.png",
-      "sizes": "48x48",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "icons/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "icons/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "icons/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "icons/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "icons/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "icons/icon-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "icons/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "icons/icon-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable any"
-    }
+      {
+          "src": "icons/icon@192.png",
+          "type": "image/png",
+          "sizes": "192x192",
+          "purpose": "any"
+      },
+      {
+          "src": "icons/icon@512.png",
+          "type": "image/png",
+          "sizes": "512x512",
+          "purpose": "any"
+      }
   ],
-  "splash_pages": null
+"screenshots": [
+  {
+    "src": "screenshots/mobile-1.jpg",
+    "sizes": "551x979",
+    "type": "image/jpeg"
+  },
+      {
+    "src": "screenshots/mobile-2.jpg",
+    "sizes": "518x922",
+    "type": "image/jpeg"
+  },
+      {
+    "src": "screenshots/mobile-3.jpg",
+    "sizes": "518x922",
+    "type": "image/jpeg"
+  },
+      {
+    "src": "screenshots/tablet-1.jpg",
+    "sizes": "1270x800",
+    "type": "image/jpeg",
+    "form_factor": "wide"
+  },
+      {
+    "src": "screenshots/tablet-2.jpg",
+    "sizes": "1270x800",
+    "type": "image/jpeg",
+    "form_factor": "wide"
+  }
+],
+"related_applications": [
+  {
+    "platform": "play",
+    "id": "com.learnpwa.app",
+    "url": "https://play.google.com/store/apps/details?id=com.learnpwa.app"
+  },
+  {
+    "platform": "webapp",
+    "url": "manifest.json"
+  }
+]
 }
