@@ -2,10 +2,19 @@
 import { useEffect, useState } from "react";
 import { useAddToHomescreenPrompt } from "./addToHomeScreen";
 
+interface IBeforeInstallPromptEvent extends Event {
+  readonly platforms: string[];
+  readonly userChoice: Promise<{
+    outcome: "accepted" | "dismissed";
+    platform: string;
+  }>;
+  prompt(): Promise<void>;
+}
+
 export default function Home() {
-  const [promptable, setPromptable] = useState(null);
+  const [promptable, setPromptable] = useState<IBeforeInstallPromptEvent | null>(null);
   useEffect(() => {
-    const ready = (e) => {
+    const ready = (e: any) => {
       e.preventDefault();
       setPromptable(e);
     };
