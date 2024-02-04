@@ -1,6 +1,6 @@
 {
   "name": "TSG Store",
-  "short_name": "TSG Store",
+  "short_name": "TSG",
   "start_url": "/pwa-install/",
   "display": "standalone",
   "background_color": "#fff",
