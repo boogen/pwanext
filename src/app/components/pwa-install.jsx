@@ -68,10 +68,13 @@ const PWAInstallComponent = ({
   return (
     <>
       <PWAInstall
+        manifest-url="/manifest.json"
         ref={pwaInstallRef}
         {...nonNullProps}
       />
-      <button onClick={() => pwaInstallRef.current.showDialog(true)}>Show Install Prompt</button>
+      <dev>
+        <button onClick={() => pwaInstallRef.current.showDialog(true)}>Show Install Prompt</button>
+      </dev>
     </>
   );
 };
