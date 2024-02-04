@@ -27,7 +27,6 @@ const PWAInstallComponent = ({
   onInstallAvailable,
   onInstallHowTo,
   onInstallGallery,
-  externalPromptEvent,
   ...props
 }) => {
   const pwaInstallRef = useRef(null);
@@ -64,7 +63,7 @@ const PWAInstallComponent = ({
         currentElement.removeEventListener('pwa-install-gallery-event', handleInstallGallery);
       };
     }
-  }, [onInstallSuccess, onInstallFail, onUserChoiceResult, onInstallAvailable, onInstallHowTo, onInstallGallery, externalPromptEvent]);
+  }, [onInstallSuccess, onInstallFail, onUserChoiceResult, onInstallAvailable, onInstallHowTo, onInstallGallery]);
 
   return (
     <>
