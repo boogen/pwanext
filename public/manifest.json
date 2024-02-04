@@ -1,6 +1,6 @@
 {
-  "name": "Progressive Web Application",
-  "short_name": "PWA",
+  "name": "Ten Square Games Store",
+  "short_name": "TSG Store",
   "start_url": "/pwa-install/",
   "display": "standalone",
   "background_color": "#fff",
