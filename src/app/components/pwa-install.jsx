@@ -63,7 +63,7 @@ const PWAInstallComponent = ({
         currentElement.removeEventListener('pwa-install-gallery-event', handleInstallGallery);
       };
     }
-  }, [onInstallSuccess, onInstallFail, onUserChoiceResult, onInstallAvailable, onInstallHowTo, onInstallGallery]);
+  }, [onInstallSuccess, onInstallFail, onUserChoiceResult, onInstallAvailable, onInstallHowTo, onInstallGallery, props]);
 
   return (
     <>
