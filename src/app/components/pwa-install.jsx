@@ -5,7 +5,6 @@ import { useRef, useEffect } from 'react';
     "@khmyznikov/pwa-install": "*",
     "@lit": "*"
 */
-//import PWAInstall from '@khmyznikov/pwa-install';
 import PWAInstall from '@khmyznikov/pwa-install/dist/pwa-install.react.js';
 
 /*
@@ -21,15 +20,6 @@ import PWAInstall from '@khmyznikov/pwa-install/dist/pwa-install.react.js';
   disableChrome = false,
 */
 
-type PWAProps = {
-  onInstallSuccess: any;
-  onInstallFail: any;
-  onUserChoiceResult: any;
-  onInstallAvailable: any,
-  onInstallHowTo: any,
-  onInstallGallery: any,
-};
-
 const PWAInstallComponent = ({
   onInstallSuccess,
   onInstallFail,
@@ -38,7 +28,7 @@ const PWAInstallComponent = ({
   onInstallHowTo,
   onInstallGallery,
   ...props
-} : PWAProps) => {
+}) => {
   const pwaInstallRef = useRef(null);
 
   // Filter out null or undefined props
@@ -47,14 +37,14 @@ const PWAInstallComponent = ({
   );
 
   useEffect(() => {
-    const currentElement = pwaInstallRef.current as EventTarget | null;
+    const currentElement = pwaInstallRef.current;
 
-    const handleInstallSuccess = (event: any) => onInstallSuccess?.(event);
-    const handleInstallFail = (event: any) => onInstallFail?.(event);
-    const handleUserChoiceResult = (event: any) => onUserChoiceResult?.(event);
-    const handleInstallAvailable = (event: any) => onInstallAvailable?.(event);
-    const handleInstallHowTo = (event: any) => onInstallHowTo?.(event);
-    const handleInstallGallery = (event: any) => onInstallGallery?.(event);
+    const handleInstallSuccess = (event) => onInstallSuccess?.(event);
+    const handleInstallFail = (event) => onInstallFail?.(event);
+    const handleUserChoiceResult = (event) => onUserChoiceResult?.(event);
+    const handleInstallAvailable = (event) => onInstallAvailable?.(event);
+    const handleInstallHowTo = (event) => onInstallHowTo?.(event);
+    const handleInstallGallery = (event) => onInstallGallery?.(event);
 
     if (currentElement) {
       currentElement.addEventListener('pwa-install-success-event', handleInstallSuccess);
@@ -81,7 +71,7 @@ const PWAInstallComponent = ({
         ref={pwaInstallRef}
         {...nonNullProps}
       />
-      <button onClick={() => pwaInstallRef?.current?.showDialog?.(true)}>Show Install Prompt</button>
+      <button onClick={() => pwaInstallRef.current.showDialog(true)}>Show Install Prompt</button>
     </>
   );
 };
