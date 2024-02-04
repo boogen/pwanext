@@ -12,11 +12,14 @@ export default function Home() {
       e.stopPropagation();
       e.stopImmediatePropagation();
       setPromptEvent(e);
+      console.log('beforeinstallprompt event fired', e);
     };
 
+    console.log('adding event listener for beforeinstallprompt event');
     window.addEventListener("beforeinstallprompt", ready as any);
 
     return () => {
+      console.log('removing event listener for beforeinstallprompt event');
       window.removeEventListener("beforeinstallprompt", ready as any);
     };
   }, []);

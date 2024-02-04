@@ -69,7 +69,6 @@ const PWAInstallComponent = ({
     <>
       <PWAInstall
         ref={pwaInstallRef}
-        externalPromptEvent={externalPromptEvent}
         {...nonNullProps}
       />
       <button onClick={() => pwaInstallRef.current.showDialog(true)}>Show Install Prompt</button>
