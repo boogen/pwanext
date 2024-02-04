@@ -8,13 +8,13 @@
   "description": "Install TSG Store and get the best deals",
   "icons": [
       {
-          "src": "icons/tsg@192.png",
+          "src": "icons/icon@192.png",
           "type": "image/png",
           "sizes": "192x192",
           "purpose": "any"
       },
       {
-          "src": "icons/tsg@512.png",
+          "src": "icons/icon@512.png",
           "type": "image/png",
           "sizes": "512x512",
           "purpose": "any"
