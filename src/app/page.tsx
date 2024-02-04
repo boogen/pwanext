@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <>
-      <PWAInstallComponent onInstallSuccess={showEvent} onInstallFail={showEvent} onUserChoiceResult={undefined} onInstallAvailable={undefined} onInstallHowTo={undefined} onInstallGallery={undefined} />
+      <PWAInstallComponent onInstallSuccess={showEvent} onInstallFail={showEvent} onUserChoiceResult={showEvent} onInstallAvailable={showEvent} onInstallHowTo={showEvent} onInstallGallery={showEvent} />
       <h1 className="title">hello tsg store!</h1>
     </>
   );

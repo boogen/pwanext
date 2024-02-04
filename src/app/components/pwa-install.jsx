@@ -1,5 +1,5 @@
 import * as Reactfrom from "react";
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useMemo } from 'react';
 
 /*  dependencies:
     "@khmyznikov/pwa-install": "*",
@@ -68,10 +68,13 @@ const PWAInstallComponent = ({
   return (
     <>
       <PWAInstall
-        manifest-url="/manifest.json"
+        disableChrome={false}
         ref={pwaInstallRef}
         {...nonNullProps}
       />
+      {pwaInstallRef?.current?.isInstallAvailable && ( 
+        <dev>install available</dev>
+      )} 
       <dev>
         <button onClick={() => pwaInstallRef.current.showDialog(true)}>Show Install Prompt</button>
       </dev>
